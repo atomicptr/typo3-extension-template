@@ -2,7 +2,7 @@
     "name": "atomicptr/typo3-extension-template",
     "description": "Because it is easier this way...",
     "type": "typo3-cms-extension",
-    "license": "None",
+    "license": "MIT",
     "authors": [
         {
             "name": "Christopher Kaster",
