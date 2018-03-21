@@ -1,0 +1,19 @@
+plugin.tx_typo3_extension_template {
+    # customsubcategory=view=View
+    view {
+        # cat=TYPO3 Template Extension/view; type=string; label=Path to templates
+        templateRootPath =
+
+        # cat=TYPO3 Template Extension/view; type=string; label=Path to template partials
+        partialRootPath =
+
+        # cat=TYPO3 Template Extension/view; type=string; label=Path to template layouts
+        layoutRootPath =
+    }
+
+    # customsubcategory=settings=Settngs
+    settings {
+        # cat=TYPO3 Template Extension/settings; type=int+; label=Storage Page ID
+        storagePid =
+    }
+}

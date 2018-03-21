@@ -1,0 +1,36 @@
+{
+    "name": "atomicptr/typo3-extension-template",
+    "description": "Because it is easier this way...",
+    "type": "typo3-cms-extension",
+    "license": "None",
+    "authors": [
+        {
+            "name": "Christopher Kaster",
+            "email": "me@atomicptr.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2",
+        "typo3/cms": "^8.7",
+        "typo3/testing-framework": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atomicptr\\Typo3ExtensionTemplate\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atomicptr\\Typo3ExtensionTemplate\\Tests\\": "Tests"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "{$vendor-dir}/typo3/web"
+        }
+    }
+}
