@@ -2,7 +2,7 @@
 
 defined("TYPO3_MODE") or die();
 
-call_user_func(function($extKey) {
+call_user_func(function ($extKey) {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         "Atomicptr.Typo3ExtensionTemplate",
         "ExamplePlugin",
@@ -15,11 +15,17 @@ call_user_func(function($extKey) {
         "<INCLUDE_TYPOSCRIPT: source=\"FILE:EXT:$extKey/Configuration/TSconfig/pagets.tsconfig\">"
     );
 
-    /* realurl configuration
-    if(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded("realurl")) {
-        $GLOBALS["TYPO3_CONF_VARS"]["SC_OPTIONS"]["ext/realurl/class.tx_realurl_autoconfgen.php"]["extensionConfiguration"]
-            ["$extKey"] =
-                "Atomicptr\\Typo3ExtensionTemplate\\Hooks\\RealUrlAutoConfiguration->addAutoConf";
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+    $icons = [
+        "typo3extensiontemplate-icon" => "EXT:typo3_extension_template/ext_icon.svg",
+    ];
+
+    foreach ($icons as $iconIdentifier => $path) {
+        $iconRegistry->registerIcon(
+            $iconIdentifier,
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ["source" => $path]
+        );
     }
-    */
 }, $_EXTKEY);

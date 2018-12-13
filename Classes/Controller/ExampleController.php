@@ -3,11 +3,16 @@
 namespace Atomicptr\Typo3ExtensionTemplate\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Annotation\Inject as inject;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
+/**
+ * Example controller
+ */
 class ExampleController extends ActionController {
 
+    /**
+     * Shows all the examples
+     * @return void
+     */
     public function listAction() {
     }
 }

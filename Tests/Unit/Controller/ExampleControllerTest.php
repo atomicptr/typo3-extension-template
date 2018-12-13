@@ -2,7 +2,7 @@
 
 namespace Atomicptr\Typo3ExtensionTemplate\Tests\Unit\Controller;
 
-use TYPO3\CMS\Core\Tests\UnitTestCase;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 class ExampleControllerTest extends UnitTestCase {
 

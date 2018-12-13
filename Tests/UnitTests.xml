@@ -14,29 +14,19 @@
     stopOnSkipped="false"
     verbose="false">
     <testsuites>
-        <testsuite name="TYPO3 Extension Template Extension">
+        <testsuite name="TYPO3 Extension Template">
             <directory>../Tests/Unit</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">../Classes/</directory>
-            <exclude>
-                <!--
-                    TODO: if possible readd this, but I don't know if it makes sense to unit test
-                    repositories
-                -->
-                <directory suffix=".php">../Classes/Domain/Repository/</directory>
-            </exclude>
         </whitelist>
     </filter>
     <logging>
         <log
             type="coverage-html"
             target="../Logs/CodeCoverage"
-            charset="UTF-8"
-            yui="true"
-            highlight="true"
             lowUpperBound="50"
             highLowerBound="50" />
         <log type="testdox-html" target="../Logs/TestDox.html" />
