@@ -1,4 +1,4 @@
-plugin.tx_typo3_extension_template {
+plugin.tx_typo3extensiontemplate {
     # customsubcategory=view=View
     view {
         # cat=TYPO3 Template Extension/view; type=string; label=Path to templates

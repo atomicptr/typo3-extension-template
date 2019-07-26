@@ -1,20 +1,20 @@
-plugin.tx_typo3_extension_template {
+plugin.tx_typo3extensiontemplate {
     view {
         templateRootPaths {
             0 = EXT:typo3_extension_template/Resources/Private/Templates/
-            1 = {$plugin.tx_typo3_extension_template.view.templateRootPath}
+            1 = {$plugin.tx_typo3extensiontemplate.view.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:typo3_extension_template/Resources/Private/Partials/
-            1 = {$plugin.tx_typo3_extension_template.view.partialRootPath}
+            1 = {$plugin.tx_typo3extensiontemplate.view.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:typo3_extension_template/Resources/Private/Layouts/
-            1 = {$plugin.tx_typo3_extension_template.view.layoutRootPath}
+            1 = {$plugin.tx_typo3extensiontemplate.view.layoutRootPath}
         }
     }
 
     persistence {
-        storagePid = {$plugin.tx_typo3_extension_template.settings.storagePid}
+        storagePid = {$plugin.tx_typo3extensiontemplate.settings.storagePid}
     }
 }

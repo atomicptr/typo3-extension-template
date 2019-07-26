@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="ganzgraph">
-    <description>
-        ganzgraph GmbH PHP Code Style
-    </description>
-
+<ruleset>
+    <exclude-pattern>*/Configuration/*</exclude-pattern>
     <exclude-pattern>*/Resources/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
-    <exclude-pattern>*/.typo3/*</exclude-pattern>
     <exclude-pattern>*/Logs/*</exclude-pattern>
     <exclude-pattern>*/*.js</exclude-pattern>
 
@@ -16,20 +12,28 @@
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" />
     </rule>
 
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
     <rule ref="Generic.Classes.OpeningBraceSameLine" />
+
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+
+    <rule ref="Generic.Files.LineEndings"/>
+
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 
-    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Generic.Metrics.CyclomaticComplexity"/>
+    <rule ref="Generic.Metrics.NestingLevel"/>
 
     <rule ref="Generic.Strings.UnnecessaryStringConcat" />
 
-    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
-    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
 
-    <rule ref="ImportDetection">
-        <exclude-pattern>*/Configuration/TCA/*</exclude-pattern>
-        <exclude-pattern>ext_*.php</exclude-pattern>
-    </rule>
+    <!-- TODO: find something better for documentation strings -->
 
     <rule ref="VariableAnalysis">
         <exclude-pattern>*/Configuration/TCA/*</exclude-pattern>
@@ -39,12 +43,5 @@
             <property name="allowUnusedFunctionParameters" value="true" />
             <property name="allowUnusedCaughtExceptions" value="true" />
         </properties>
-    </rule>
-
-    <rule ref="Squiz.Commenting.ClassComment">
-        <exclude-pattern>*/Tests/*</exclude-pattern>
-    </rule>
-    <rule ref="Squiz.Commenting.FunctionComment">
-        <exclude-pattern>*/Tests/*</exclude-pattern>
     </rule>
 </ruleset>
